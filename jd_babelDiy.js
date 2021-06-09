@@ -2,7 +2,7 @@
 总裁送好礼@wenmoux
 没加判断 凑合用吧 或者等大佬发脚本
 抄自 @yangtingxiao 抽奖机脚本
-活动入口：
+活动入口：st
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
