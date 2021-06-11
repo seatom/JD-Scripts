@@ -36,10 +36,10 @@
 40 9,21 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
 #动物联盟
 0 0,6-23/2 * * * node /scripts/jd_zoo.js >> /scripts/logs/jd_zoo.log 2>&1
+#动物联盟PK HELP
+#52 8 * 7 * node /scripts/jd_zoo-only_help_pk.js >> /scripts/logs/jd_zoo-only_help_pk.log 2>&1
 #动物联盟收集金币
 0-59/30 * * * * node /scripts/jd_zooCollect.js >> /scripts/logs/jd_zooCollect.log 2>&1
-#星推官
-0 0 * * * node /scripts/jd_xtg.js >> /scripts/logs/jd_xtg.log 2>&1
 #jd_babelDiy
 30 12 * * * node /scripts/jd_babelDiy.js >> /scripts/logs/jd_babelDiy.log 2>&1
 #明星小店

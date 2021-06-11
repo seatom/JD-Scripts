@@ -10,7 +10,9 @@ PK互助：内部账号自行互助(排名靠前账号得到的机会多),多余
 金融APP任务：已完成
 活动时间：2021-05-24至2021-06-20
 脚本更新时间：2021-06-11 11:00
-！该版本无PK助力
+
+！该版本只有PK助力功能，助力前6个账号
+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ===================quantumultx================
 [task_local]
@@ -41,7 +43,7 @@ cron "33 0,6-23/2 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/ma
 const $ = new Env('618动物联萌');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const pKHelpFlag = false;//是否PK助力  true 助力，false 不助力
+const pKHelpFlag = true;//是否PK助力  true 助力，false 不助力
 const pKHelpAuthorFlag = false;//是否助力作者PK  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
@@ -125,13 +127,13 @@ if ($.isNode()) {
     //pk助力
     if (new Date().getHours() >= 9) {
       console.log(`\n******开始内部京东账号【怪兽大作战pk】助力*********\n`);
-      for (let i = 0; i < $.pkInviteList.length && pKHelpFlag && $.canHelp; i++) {
+      for (let i = 0; i < 6 && pKHelpFlag && $.canHelp; i++) {
         console.log(`${$.UserName} 去助力PK码 ${$.pkInviteList[i]}`);
         $.pkInviteId = $.pkInviteList[i];
         await takePostRequest('pkHelp');
         await $.wait(2000);
       }
-      $.canHelp = true;
+      $.canHelp = false;
     }
     if ($.inviteList && $.inviteList.length) console.log(`\n******开始内部京东账号【邀请好友助力】*********\n`);
     for (let j = 0; j < $.inviteList.length && $.canHelp; j++) {
@@ -169,34 +171,34 @@ async function zoo() {
     } else {
       console.log(`\n获取活动信息`);
     }
-    await $.wait(1000);
-    await takePostRequest('zoo_getHomeData');
-    $.userInfo =$.homeData.result.homeMainInfo
-    console.log(`\n\n当前分红：${$.userInfo.raiseInfo.redNum}份，当前等级:${$.userInfo.raiseInfo.scoreLevel}\n当前金币${$.userInfo.raiseInfo.remainScore}，下一关需要${$.userInfo.raiseInfo.nextLevelScore - $.userInfo.raiseInfo.curLevelStartScore}\n\n`);
-    await $.wait(1000);
-    await takePostRequest('zoo_getSignHomeData');
-    await $.wait(1000);
-    if($.signHomeData.todayStatus === 0){
-      console.log(`去签到`);
-      await takePostRequest('zoo_sign');
-      await $.wait(1000);
-    }else{
-      console.log(`已签到`);
-    }
-    let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
-    if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
-      console.log(`满足升级条件，去升级`);
-      await $.wait(3000);
-      await takePostRequest('zoo_raise');
-    }
+//    await $.wait(1000);
+//    await takePostRequest('zoo_getHomeData');
+//    $.userInfo =$.homeData.result.homeMainInfo
+//    console.log(`\n\n当前分红：${$.userInfo.raiseInfo.redNum}份，当前等级:${$.userInfo.raiseInfo.scoreLevel}\n当前金币${$.userInfo.raiseInfo.remainScore}，下一关需要${$.userInfo.raiseInfo.nextLevelScore - $.userInfo.raiseInfo.curLevelStartScore}\n\n`);
+//    await $.wait(1000);
+//    await takePostRequest('zoo_getSignHomeData');
+//    await $.wait(1000);
+//    if($.signHomeData.todayStatus === 0){
+//      console.log(`去签到`);
+//      await takePostRequest('zoo_sign');
+//      await $.wait(1000);
+//    }else{
+//      console.log(`已签到`);
+//    }
+//    let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
+//    if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
+//      console.log(`满足升级条件，去升级`);
+//      await $.wait(3000);
+//      await takePostRequest('zoo_raise');
+//    }
     //收金币
-    await $.wait(1000);
-    await takePostRequest('zoo_collectProduceScore');
-    await $.wait(1000);
-    await takePostRequest('zoo_getTaskDetail');
-    await $.wait(1000);
+//    await $.wait(1000);
+//    await takePostRequest('zoo_collectProduceScore');
+//    await $.wait(1000);
+//    await takePostRequest('zoo_getTaskDetail');
+//    await $.wait(1000);
     //做任务
-    for (let i = 0; i < $.taskList.length && $.secretp && !$.hotFlag; i++) {
+    for (let i = 0; i < $.taskList.length && $.secretp && false; i++) {
       $.oneTask = $.taskList[i];
       if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
         $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
@@ -268,7 +270,7 @@ async function zoo() {
       await takePostRequest('zoo_raise');
     }
     //===================================图鉴里的店铺====================================================================
-    if (new Date().getHours()>= 17 && new Date().getHours()<= 18 && !$.hotFlag) {//分享
+    if (new Date().getHours()>= 17 && new Date().getHours()<= 18 && false) {//分享
       $.myMapList = [];
       await takePostRequest('zoo_myMap');
       for (let i = 0; i < $.myMapList.length; i++) {
@@ -280,7 +282,7 @@ async function zoo() {
         }
       }
     }
-    if (new Date().getHours() >= 14 && new Date().getHours() <= 17 && !$.hotFlag){//30个店铺，为了避免代码执行太久，下午2点到5点才做店铺任务
+    if (new Date().getHours() >= 14 && new Date().getHours() <= 17 && false){//30个店铺，为了避免代码执行太久，下午2点到5点才做店铺任务
       console.log(`去做店铺任务`);
       $.shopInfoList = [];
       await takePostRequest('qryCompositeMaterials');
@@ -343,7 +345,7 @@ async function zoo() {
     }
     //==================================微信任务========================================================================
     $.wxTaskList = [];
-    if(!$.hotFlag) await takePostRequest('wxTaskDetail');
+    if(false) await takePostRequest('wxTaskDetail');
     for (let i = 0; i < $.wxTaskList.length; i++) {
       $.oneTask = $.wxTaskList[i];
       if($.oneTask.taskType === 2 || $.oneTask.status !== 1){continue;} //不做加购
@@ -368,7 +370,7 @@ async function zoo() {
     }
     //=======================================================京东金融=================================================================================
     $.jdjrTaskList = [];
-    if(!$.hotFlag) await takePostRequest('jdjrTaskDetail');
+    if(false) await takePostRequest('jdjrTaskDetail');
     await $.wait(1000);
     for (let i = 0; i < $.jdjrTaskList.length; i++) {
       $.taskId = $.jdjrTaskList[i].id;
@@ -391,7 +393,7 @@ async function zoo() {
     }
     await $.wait(1000);
     $.pkTaskList = [];
-    if(!$.hotFlag) await takePostRequest('zoo_pk_getTaskDetail');
+    if(false) await takePostRequest('zoo_pk_getTaskDetail');
     await $.wait(1000);
     for (let i = 0; i < $.pkTaskList.length; i++) {
       $.oneTask = $.pkTaskList[i];
@@ -595,7 +597,7 @@ async function dealReturn(type, data) {
         console.log(JSON.stringify(data));
       }
       if(data.code === 0 && data.data && data.data.bizCode === -1002){
-        $.hotFlag = true;
+//        $.hotFlag = true;
         console.log(`该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`)
       }
       break;
