@@ -37,7 +37,7 @@
 #动物联盟
 0 0,6-23/2 * * * node /scripts/jd_zoo.js >> /scripts/logs/jd_zoo.log 2>&1
 #动物联盟PK HELP
-52 8 * 7 * node /scripts/jd_zoo-only_help_pk.js >> /scripts/logs/jd_zoo-only_help_pk.log 2>&1
+52 8 * 7 * node /scripts/jd_zooHelpPk.js >> /scripts/logs/jd_zooHelpPk.log 2>&1
 #动物联盟收集金币
 0-59/30 * * * * node /scripts/jd_zooCollect.js >> /scripts/logs/jd_zooCollect.log 2>&1
 #jd_babelDiy
