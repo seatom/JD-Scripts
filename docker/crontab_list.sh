@@ -38,6 +38,8 @@
 0 0,6-23/2 * * * node /scripts/jd_zoo.js >> /scripts/logs/jd_zoo.log 2>&1
 #动物联盟PK HELP
 52 8 * 7 * node /scripts/jd_zooHelpPk.js >> /scripts/logs/jd_zooHelpPk.log 2>&1
+#动物联盟Skill
+0 18 * * * node /scripts/jd_zooSkill.js >> /scripts/logs/jd_zooSkill.log 2>&1
 #动物联盟收集金币
 0-59/30 * * * * node /scripts/jd_zooCollect.js >> /scripts/logs/jd_zooCollect.log 2>&1
 #jd_babelDiy
@@ -62,16 +64,6 @@
 1 6,20 * 7 * node /scripts/jd_jxlhb2.js >> /scripts/logs/jd_jxlhb2.log 2>&1
 #京享值pk
 15 0,6,13,19,21 * 6 * node /scripts/jd_pk.js >> /scripts/logs/jd_pk.log 2>&1
-#大牌联合618提前购
-0 23,6 3-18 6 * node /scripts/jd_618Opencard01.js >> /scripts/logs/jd_618Opencard01.log 2>&1
-#大牌联合618提前购
-01 23,6 3-18 6 * node /scripts/jd_618Opencard02.js >> /scripts/logs/jd_618Opencard02.log 2>&1
-#大牌联合618提前购
-02 23,6 3-18 6 * node /scripts/jd_618Opencard03.js >> /scripts/logs/jd_618Opencard03.log 2>&1
-#大牌联合618提前购
-04 23,6 3-18 6 * node /scripts/jd_618Opencard04.js >> /scripts/logs/jd_618Opencard04.log 2>&1
-#大牌联合618提前购
-05 23,6 3-18 6 * node /scripts/jd_618Opencard05.js >> /scripts/logs/jd_618Opencard05.log 2>&1
 #限时盲盒
 30 7,19 1-18 6 * node /scripts/jd_limitBox.js >> /scripts/logs/jd_limitBox.log 2>&1
 #京喜牧场
