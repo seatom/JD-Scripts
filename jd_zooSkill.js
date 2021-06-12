@@ -11,7 +11,7 @@ PK互助：内部账号自行互助(排名靠前账号得到的机会多),多余
 活动时间：2021-05-24至2021-06-20
 脚本更新时间：2021-06-11 11:00
 
-！该版本只有PK助力功能，助力前6个账号
+！该版本只能释放技能，无其他功能
 
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ===================quantumultx================
@@ -40,10 +40,10 @@ cron "33 0,6-23/2 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/ma
 });
 
  
-const $ = new Env('618动物联萌-PK助力专用');
+const $ = new Env('618动物联萌-释放技能专用');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const pKHelpFlag = true;//是否PK助力  true 助力，false 不助力
+const pKHelpFlag = false;//是否PK助力  true 助力，false 不助力
 const pKHelpAuthorFlag = false;//是否助力作者PK  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
@@ -415,7 +415,7 @@ async function zoo() {
     //await takePostRequest('zoo_pk_getTaskDetail');
     let skillList = $.pkHomeData.result.groupInfo.skillList || [];
     //activityStatus === 1未开始，2 已开始
-    $.doSkillFlag = false;
+    $.doSkillFlag = true;
     for (let i = 0; i < skillList.length && $.pkHomeData.result.activityStatus === 2 && $.doSkillFlag; i++) {
       if (Number(skillList[i].num) > 0) {
         $.skillCode = skillList[i].code;
