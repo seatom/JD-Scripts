@@ -145,7 +145,7 @@ function showFormatMsg(shareCodeObj) {
   console.log(`\n========== 【格式化互助码for docker ==========`);
   formatShareCodesForLinux(
     shareCodeObj.Bean,
-    "种豆得豆",
+    "京东种豆得豆",
     "MyBean",
     "ForOtherBean"
   );
