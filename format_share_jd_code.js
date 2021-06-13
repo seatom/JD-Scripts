@@ -47,7 +47,7 @@ if (!$.isNode()) {
         .join("")
         .split("$&$");
 
-      $.shareCodeObj.Bean = exportShareCodes(arr, "种豆得豆：");
+      $.shareCodeObj.Bean = exportShareCodes(arr, "京东种豆得豆：");
       $.shareCodeObj.Fruit = exportShareCodes(arr, "东东农场：");
       $.shareCodeObj.Pet = exportShareCodes(arr, "东东萌宠：");
       $.shareCodeObj.DreamFactory = exportShareCodes(arr, "京喜工厂：");
