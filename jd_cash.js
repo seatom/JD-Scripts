@@ -31,8 +31,21 @@ const randomCount = $.isNode() ? 20 : 5;
 let t = +new Date()
 let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
 const inviteCodes = [
-  ``,
-  ``
+"cho0beS0YfQh8mvd",
+"YE5mKLPvPKg",
+"eU9Ya-q7M6138TyDwiUWhA",
+"fVJ1Ka73",
+"eU9YBZjVGbVwuC6cmSlS",
+"eU9YMKbOGrR4hQ-BjC9I",
+"ZEppJLXsZPsj-WfXyns",
+"ZE9CDrnENL5YpDyksSE",
+"eU9YDq_UA4ZfsTOGrCxy",
+"ZE9eEpvFAppzohSxswY",
+"eU9YaeqyZ6km827QnXES0A",
+"chg2aeu0",
+"eU9YaeuyN_oupDrSznNG1Q",
+"IhMxbOS2b_kn82u6iw",
+"eU9Ya7-7Nf4i9WyEzCUbhQ"
 ]
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -456,7 +469,7 @@ function taskUrl(functionId, body = {}) {
   }
 }
 
-function getAuthorShareCode(url = "https://cdn.jsdelivr.net/gh/readme02/updateTeam@master/shareCodes/jd_updateCash.json") {
+function getAuthorShareCode(url = "https://cdn.jsdelivr.net/gh/seatom/updateTeam@main/shareCodes/JD_Cash.json") {
   return new Promise(resolve => {
     $.get({url, headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
