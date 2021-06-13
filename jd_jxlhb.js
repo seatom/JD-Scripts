@@ -51,9 +51,10 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
   //let res = await getAuthorShareCode() || [];
   //let res2 = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/seatom/updateTeam@main/shareCodes/jxhb.json') || [];
   //if (res && res.activeId) $.activeId = res.activeId;
+  //$.authorMyShareIds = [...((res && res.codes) || []), ...res2];
   $.authorMyShareIds = [
-"yS8GVhLgEG1DJWV3Q0Jl2IHh3lYS989FZLBNDR7vHkc",
 "yS8GVhLgEG1DJWV3Q0Jl2C91qBNcLL-SCRfR8E6ZXS4",
+"yS8GVhLgEG1DJWV3Q0Jl2IHh3lYS989FZLBNDR7vHkc",
 "yS8GVhLgEG1DJWV3Q0Jl2CjrfVPuHMl9I16qCFVd9vCg2Iz3S0mh6WEZxJEoHpF5",
 "yS8GVhLgEG1DJWV3Q0Jl2CoaV3LopzXB0St5NsplJzy0HUflHe3QerLjOJtCXoxd",
 "yS8GVhLgEG1DJWV3Q0Jl2CsEpKmbGFh-AxTrZWoPtkkcyNC5eQqZl7KVK6Di_Uac",
