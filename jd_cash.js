@@ -31,10 +31,10 @@ const randomCount = $.isNode() ? 20 : 5;
 let t = +new Date()
 let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
 const inviteCodes = [
+"fVJ1Ka73",
 "cho0beS0YfQh8mvd",
 "YE5mKLPvPKg",
 "eU9Ya-q7M6138TyDwiUWhA",
-"fVJ1Ka73",
 "eU9YBZjVGbVwuC6cmSlS",
 "eU9YMKbOGrR4hQ-BjC9I",
 "ZEppJLXsZPsj-WfXyns",
