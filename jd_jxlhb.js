@@ -80,13 +80,13 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
     $.max = false;
     $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
     for (let code of $.packetIdArr) {
-      if (!code) break;
+      if (!code) continue;
       if ($.UserName === code['userName']) continue;
       if (!$.canHelp) break
       if ($.max) break
-      console.log(`【${$.UserName}】去助力【${code['userName']}】邀请码：${code['strUserPin']}`);
-      await enrollFriend(code['strUserPin']);
-      await $.wait(2500);
+      //console.log(`【${$.UserName}】去助力【${code['userName']}】邀请码：${code['strUserPin']}`);
+      //await enrollFriend(code['strUserPin']);
+      //await $.wait(2500);
     }
     if ($.canHelp) {
       console.log(`\n【${$.UserName}】有剩余助力机会，开始助力作者\n`)
