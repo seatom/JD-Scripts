@@ -136,7 +136,7 @@ function getHomeData() {
 function taskPostUrl(functionId, body = {}) {
   return {
     url: `${JD_API_HOST}?functionId=${functionId}`,
-    body: `functionId=${functionId}&body=${JSON.stringify(body)}&client=wh5&clientVersion=1.0.0`,
+    body: `functionId=${functionId}&body=${JSON.stringify(body)}&client=wh5&clientVersion=1.0.0&uuid=ef746bc0663f7ca06cdd1fa724c15451900039cf`,
     headers: {
       'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
       'Content-Type': 'application/x-www-form-urlencoded',
