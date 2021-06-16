@@ -131,7 +131,7 @@ if ($.isNode()) {
         console.log(`${$.UserName} 去助力PK码 ${$.pkInviteList[i]}`);
         $.pkInviteId = $.pkInviteList[i];
         await takePostRequest('pkHelp');
-        await $.wait(2000);
+        await $.wait(2100);
       }
       $.canHelp = false;
     }
