@@ -60,8 +60,6 @@
 1 0-23/1 * 6 * node /scripts/jd_flipcards.js >> /scripts/logs/jd_flipcards.log 2>&1
 #京喜领红包
 1 5,20 * 6 * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
-#京喜领红包2
-1 6,20 * 7 * node /scripts/jd_jxlhb2.js >> /scripts/logs/jd_jxlhb2.log 2>&1
 #京享值pk
 15 0,6,13,19,21 * 6 * node /scripts/jd_pk.js >> /scripts/logs/jd_pk.log 2>&1
 #限时盲盒
