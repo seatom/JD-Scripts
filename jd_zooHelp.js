@@ -184,16 +184,16 @@ async function zoo() {
   //  }else{
    //   console.log(`已签到`);
   //  }
-   // let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
-   // if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
-   //   console.log(`满足升级条件，去升级`);
-   //   await $.wait(3000);
-   //   await takePostRequest('zoo_raise');
-   // }
+    let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
+    //if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
+    //  console.log(`满足升级条件，去升级`);
+    //  await $.wait(3000);
+    //  await takePostRequest('zoo_raise');
+    //}
     //收金币
-   // await $.wait(1000);
-    //await takePostRequest('zoo_collectProduceScore');
-   // await $.wait(1000);
+    await $.wait(1000);
+    await takePostRequest('zoo_collectProduceScore');
+    await $.wait(1000);
     await takePostRequest('zoo_getTaskDetail');
     await $.wait(1000);
     //做任务
