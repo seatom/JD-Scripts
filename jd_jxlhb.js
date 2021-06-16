@@ -80,7 +80,7 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
     $.max = false;
     $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
     for (let code of $.packetIdArr) {
-      if (!code) continue;
+      if (!code) break;
       if ($.UserName === code['userName']) continue;
       if (!$.canHelp) break
       if ($.max) break
@@ -104,7 +104,7 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
     cookie = cookiesArr[i];
     $.canOpenGrade = true;
     $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
-    const grades = [1, 2, 3, 4, 5, 6];
+    const grades = [1, 2, 3, 4, 5, 6, 7];
     for (let grade of grades) {
       if (!$.canOpenGrade) break;
       if (!$.packetIdArr[i]) continue;
