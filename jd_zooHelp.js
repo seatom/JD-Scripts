@@ -135,7 +135,7 @@ if ($.isNode()) {
       $.canHelp = true;
     }
     if ($.inviteList && $.inviteList.length) console.log(`\n******开始内部京东账号【邀请好友助力】*********\n`);
-    for (let j = 0; j < 1 && $.canHelp; j++) {
+    for (let j = 0; j < 7 && $.canHelp; j++) {
       $.oneInviteInfo = $.inviteList[j];
       if ($.oneInviteInfo.ues === $.UserName || $.oneInviteInfo.max) {
         continue;
