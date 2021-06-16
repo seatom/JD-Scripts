@@ -43,7 +43,7 @@ cron "33 0,6-23/2 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/ma
 const $ = new Env('618动物联萌-PK助力专用');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const pKHelpFlag = false;//是否PK助力  true 助力，false 不助力
+const pKHelpFlag = true;//是否PK助力  true 助力，false 不助力
 const pKHelpAuthorFlag = false;//是否助力作者PK  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
@@ -134,10 +134,10 @@ if ($.isNode()) {
         await takePostRequest('pkHelp');
         await $.wait(2100);
       }
-      $.canHelp = true;
+      $.canHelp = false;
     }
     if ($.inviteList && $.inviteList.length) console.log(`\n******开始内部京东账号【邀请好友助力】*********\n`);
-    for (let j = 0; j < 2 && $.canHelp; j++) {
+    for (let j = 0; j < $.inviteList.length && $.canHelp; j++) {
       $.oneInviteInfo = $.inviteList[j];
       if ($.oneInviteInfo.ues === $.UserName || $.oneInviteInfo.max) {
         continue;
