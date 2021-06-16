@@ -132,7 +132,7 @@ if ($.isNode()) {
         await takePostRequest('pkHelp');
         await $.wait(2000);
       }
-      $.canHelp = true;
+      $.canHelp = false;
     }
     if ($.inviteList && $.inviteList.length) console.log(`\n******开始内部京东账号【邀请好友助力】*********\n`);
     for (let j = 0; j < $.inviteList.length && $.canHelp; j++) {
