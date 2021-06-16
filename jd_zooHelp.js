@@ -191,9 +191,9 @@ async function zoo() {
     //  await takePostRequest('zoo_raise');
     //}
     //收金币
-    await $.wait(1000);
-    await takePostRequest('zoo_collectProduceScore');
-    await $.wait(1000);
+    //await $.wait(1000);
+   // await takePostRequest('zoo_collectProduceScore');
+   // await $.wait(1000);
     await takePostRequest('zoo_getTaskDetail');
     await $.wait(1000);
     //做任务
