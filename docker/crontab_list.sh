@@ -36,8 +36,6 @@
 40 9,21 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
 #动物联盟
 0 0,6-23/2 * * * node /scripts/jd_zoo.js >> /scripts/logs/jd_zoo.log 2>&1
-#动物联盟PK HELP
-52 8 * 7 * node /scripts/jd_zooHelpPk.js >> /scripts/logs/jd_zooHelpPk.log 2>&1
 #动物联盟HELP
 52 7,10 * 6 * node /scripts/jd_zooHelp.js >> /scripts/logs/jd_zooHelp.log 2>&1
 #动物联盟Skill
