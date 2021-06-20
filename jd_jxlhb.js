@@ -53,15 +53,15 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
   //if (res && res.activeId) $.activeId = res.activeId;
   //$.authorMyShareIds = [...((res && res.codes) || []), ...res2];
   $.authorMyShareIds = [
-"QCSbchhuDSkMf9FpD8KJyIHh3lYS989FZLBNDR7vHkc",
-"QCSbchhuDSkMf9FpD8KJyCjrfVPuHMl9I16qCFVd9vCg2Iz3S0mh6WEZxJEoHpF5",
-"QCSbchhuDSkMf9FpD8KJyCsEpKmbGFh-AxTrZWoPtkkcyNC5eQqZl7KVK6Di_Uac",
-"QCSbchhuDSkMf9FpD8KJyC91qBNcLL-SCRfR8E6ZXS4",
-"QCSbchhuDSkMf9FpD8KJyEit5xB7hEhZqIf6MPKoUhJMt2t-MRZmCgD4LX1hzriD",
-"QCSbchhuDSkMf9FpD8KJyKzG9kwKks-eM9TbKTwn9ai7qgrx_LU9RrSrXbQ5VW7t",
-"QCSbchhuDSkMf9FpD8KJyCoaV3LopzXB0St5NsplJzy0HUflHe3QerLjOJtCXoxd",
-"QCSbchhuDSkMf9FpD8KJyERyar2L7AIbQBWXafpCvg6YPFVc6cL2fs4MJ7LeCQyU",
-"QCSbchhuDSkMf9FpD8KJyH3fTbKt6jWGG9yDyJ-iIDOH7lqnzE4hT8CTI9utANmN"
+"Hzb5IKuYblPXt7uPGaRwBIHh3lYS989FZLBNDR7vHkc",
+"Hzb5IKuYblPXt7uPGaRwBCjrfVPuHMl9I16qCFVd9vCg2Iz3S0mh6WEZxJEoHpF5",
+"Hzb5IKuYblPXt7uPGaRwBCsEpKmbGFh-AxTrZWoPtkkcyNC5eQqZl7KVK6Di_Uac",
+"Hzb5IKuYblPXt7uPGaRwBC91qBNcLL-SCRfR8E6ZXS4",
+"Hzb5IKuYblPXt7uPGaRwBEit5xB7hEhZqIf6MPKoUhJMt2t-MRZmCgD4LX1hzriD",
+"Hzb5IKuYblPXt7uPGaRwBKzG9kwKks-eM9TbKTwn9ai7qgrx_LU9RrSrXbQ5VW7t",
+"Hzb5IKuYblPXt7uPGaRwBCoaV3LopzXB0St5NsplJzy0HUflHe3QerLjOJtCXoxd",
+"Hzb5IKuYblPXt7uPGaRwBERyar2L7AIbQBWXafpCvg6YPFVc6cL2fs4MJ7LeCQyU",
+"Hzb5IKuYblPXt7uPGaRwBH3fTbKt6jWGG9yDyJ-iIDOH7lqnzE4hT8CTI9utANmN"
 ];
   //开启红包,获取互助码
   for (let i = 0; i < cookiesArr.length; i++) {
