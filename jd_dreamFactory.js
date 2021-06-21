@@ -43,66 +43,7 @@ let tuanActiveId = ``, hasSend = false;
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
 let cookiesArr = [], cookie = '', message = '', allMessage = '';
 const inviteCodes = [
-"DE30QFRz_j9oH4NGbOrApA==",
-"ScVLov-OshJh3rLWdQSogA==",
-"czEloz2sUVMvGWxL0xj0bw==",
-"pIlsj7dFsw-bii531CMHYQ==",
-"5kE8VD8lHgV_YBR7ZYNYvg==",
-"FPw--FW3rAs-9_voRJ63Hg==",
-"cepHYYXRJpZxyHzIVmvlqg==",
-"izAEDWX_bR80FmnBpjiA6A==",
-"sC2hoL8wR_yeV_SdNZ46eQ==",
-"GgWOmUo6--tSGC-MbG0TDw==",
-"gm3Mb7Z4820OZOOF2Hzf-Q==",
-"_qeo0_-L8xYSFljx0R6PKg==",
-"AacRh-901J1LteFTqvSq9g==",
-"hJeX2qyrkeQLteLfgrnevg==",
-"CMfNNleQZqF5IN8f1_5Yhg==",
-"sRHGcrVT3nvGwIR9J7Qznw==",
-"etY3HO0MZwbWBtk8hRk9eQ==",
-"omzvgwhRjw7geH1rmaAt5g==",
-"vecEn6eY-iHLSSWy1FGzqQ==",
-"kSd9bceGKjLwnKV6EaYI8g==",
-"_BOeJE8S6ri0V1VW6YmiLQ==",
-"3Q0o-L7gOIyV7zSwAPvy4Q==",
-"36SIOHSOjmL2A6F0Jx0ZZw==",
-"4wgzafeG2FY0pfbMyPjIXw==",
-"hb-ap2U1uqAVHXEVcP1ggw==",
-"dzp9r-aNSTdg50cdUPSYXA==",
-"YRcdUk1JyYYSOaPWjcJdQg==",
-"DmF9BXiVO2g3T6GA68blmA==",
-"lEtoSDZOkX9geCMXoKmhsg==",
-"hZ18I6vAAsgcYz0iJNrUNQ==",
-"oNbTBVmBY47GIY9IYCKo9w==",
-"xfr3T9Qg6i-NL1WvXC80fg==",
-"BSBntvggdluqtP3Lk-OADQ==",
-"PVa2JIB1qWDPFHPDt1kSTg==",
-"XkfFzDc7I0EW6jDSeHMAIw==",
-"38QR_G5wgIxMHi3k46hidQ==",
-"vBCQBtk1zWnesPvMERaKjw==",
-"ihvnZKsXzTYPM1h0M0_zwQ==",
-"_xKa_aqOOpKhOWmx3P20uQ==",
-"d3PZIEeMz5KqWDLs-Beuaw==",
-"n8Hs2K6K4eVLwmPWwVGF1A==",
-"iUZWBi3P8pZjhrFH6rXLGQ==",
-"tTlchhE6T3E8X84b1rtwpg==",
-"7nmr5UPwBx_s2ZB4qJ0Y8A==",
-"uxvuEWUYr9oc3ZTGjHc_wg==",
-"PzQqPfyCqHLnY7pV1E6IAQ==",
-"AmY6vcw5MOa1jgeg7Jm-9g==",
-"r0jR3oe4SkFUzLcBIHytBQ==",
-"L4vj58RIp1dWwJ-67eQHjw==",
-"v7tw4y29IKTuqxkxU7ZURg==",
-"X_LYuQln6z0zWBQogLUw4w==",
-"7zi-4bKqiZmW0TrQzSIMdw==",
-"RRPJVLLBCl3zB_yQnYeCqQ==",
-"4netKb-44PEEwFXFHE8-zw==",
-"wPshrcerqroQQXl3rbT8cg==",
-"SaMyAnRN-_szF0fvb3g73w==",
-"HJ4-JAqqWzw47ZiVQEPk4g==",
-"xiBjZXBpC4QiOWPllbiVlg==",
-"ZuyHyRvuxNRdl6URyIMI_A==",
-"94rGNwgY9z0NKxmTslNaJA=="
+"DE30QFRz_j9oH4NGbOrApA=="
 ];
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 $.tuanIds = [];
@@ -1363,14 +1304,16 @@ async function showMsg() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `http://share.turinglabs.net/api/v3/jxfactory/query/${randomCount}/`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: "https://cdn.jsdelivr.net/gh/seatom/updateTeam@main/shareCodes/JD_Dream_Factory.json",headers:{
+      "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
+    }}, async (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
           if (data) {
-            console.log(`随机取${randomCount}个码放到您固定的互助码后面(不影响已有固定互助)`)
+            console.log(`取助力码放到您固定的互助码后面(不影响已有固定互助)`)
             data = JSON.parse(data);
           }
         }
