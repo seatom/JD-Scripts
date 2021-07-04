@@ -28,23 +28,8 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const randomCount = $.isNode() ? 20 : 5;
 const notify = $.isNode() ? require('./sendNotify') : '';
 let helpArr = [
-  {"shareCode":"A480C21E5FBAFA0841A0452AE35E8472","groupCodeID":"860674109647245312"},
-  {"shareCode":"52DA66D1EE7F35A42ECD9478891BF3EDAD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860675620021485568"},
-  {"shareCode":"2DC1C26E50DF6E2BEC9C97A8FD0F6D45","groupCodeID":"860675017933733888"},
-  {"shareCode":"1332CF66CD8037618DF09458F720A94A","groupCodeID":"860673939245518848"},
-  {"shareCode":"26C771723F636023E9E44F6E4C687640","groupCodeID":"860673368488431616"},
-  {"shareCode":"5EDCD954F916A65520D0046881D70FB5","groupCodeID":"860674938137497600"},
-  {"shareCode":"522E1439A7A31CAF340209442EDDDC55","groupCodeID":"860674715540279296"},
-  {"shareCode":"9B229935EE778C64A09B9F1983B7591F","groupCodeID":"860674169836814336"},
-  {"shareCode":"57262348C9A39FCB4FC737C0C97710D2","groupCodeID":"860676962845478912"},
-  {"shareCode":"EC0E228C582BFBD9A1660CCF99901260AD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860677121833455616"},
-  {"shareCode":"418C17A0B1AEE0F38DF1405029A67677","groupCodeID":"860677281116475392"},
-  {"shareCode":"46576BE09ABB8DE460CE5D9125C0C644AD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860677447860113408"},
-  {"shareCode":"96D5B2D22C249776568A1D9EE896B065","groupCodeID":"860677641667366912"},
-  {"shareCode":"6E9067E19BADDB3653E839D4310014E2AD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860677833046118400"},
-  {"shareCode":"05DC5EB11E4737AD13BE9C344043EC5CAD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860677991358418944"},
-  {"shareCode":"D1156355D3182E08B48194551438A5DDAD1DAAB9A3E3F6CBAFDE81EEB7393333","groupCodeID":"860678184133738496"},
-  {"shareCode":"2CE2CDD1D6A3AD5EC16635E83CC6E392","groupCodeID":"860676970216837120"}
+
+
   ];
 let actId = '';
 //IOS等用户直接用NobyDa的jd cookie
@@ -89,7 +74,7 @@ const JD_API_HOST = `https://api.m.jd.com/`;
       }
 
       //助力前十个
-      if (i < 10) {
+      if (i < 19) {
         await getcode();
         await $.wait(1000);
       } else {
@@ -126,7 +111,7 @@ const JD_API_HOST = `https://api.m.jd.com/`;
       //开始助力
       if (helpArr && helpArr.length > 0) {
         console.log("内部助力ing...")
-        for (let index = 0; index < 17; index++) {
+        for (let index = 0; index < 19; index++) {
           console.log("开始助力第" + (index + 1) + "个助力码：", JSON.stringify(helpArr[index]));
           await help(helpArr[index].groupCodeID, helpArr[index].shareCode)
           await $.wait(1000);
