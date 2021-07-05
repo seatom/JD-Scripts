@@ -2,8 +2,6 @@
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
 ##############短期活动##############
-#金口碑奖投票
-1 0,8 * * * node /scripts/jd_mgold.js >> /scripts/logs/jd_mgold.log 2>&1
 #全民抢京豆
 1 8,13 * * * node /scripts/jd_qmqjd.js >> /scripts/logs/jd_qmqjd.log 2>&1
 #极速版红包
@@ -34,8 +32,6 @@
 34 3-23/2 * * * node /scripts/jd_djjl.js >> /scripts/logs/jd_djjl.log 2>&1
 #金榜创造营
 40 9,21 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
-#明星小店
-5 9 * * * node /scripts/jd_star_shop.js >> /scripts/logs/jd_star_shop.log 2>&1
 #5g超级盲盒
 0 */4 * * * node /scripts/jd_mohe.js >> /scripts/logs/jd_mohe.log 2>&1
 #京喜牧场
@@ -44,7 +40,10 @@
 25 7 * * * node /scripts/jd_DrawEntrance.js >> /scripts/logs/jd_DrawEntrance.log 2>&1
 #国创
 25 9 * * * node /scripts/jd_superBrand.js >> /scripts/logs/jd_superBrand.log 2>&1
-
+#众筹许愿池
+20 12 * * * node /scripts/jd_wishingPool.js >> /scripts/logs/jd_wishingPool.log 2>&1
+#汪汪乐园
+30 2,20 * * * node /scripts/jd_joy_park.js >> /scripts/logs/jd_joy_park.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
