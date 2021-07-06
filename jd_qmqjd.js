@@ -91,7 +91,7 @@ const JD_API_HOST = `https://api.m.jd.com/`;
       }
 
       //助力前十个
-      if (i < 10) {
+      if (i < 3) {
         await getcode();
         await $.wait(1000);
       } else {
@@ -128,7 +128,7 @@ const JD_API_HOST = `https://api.m.jd.com/`;
       //开始助力
       if (helpArr && helpArr.length > 0) {
         console.log("内部助力ing...")
-        for (let index = 0; index < 29; index++) {
+        for (let index = 0; index < 22; index++) {
           console.log("开始助力第" + (index + 1) + "个助力码：", JSON.stringify(helpArr[index]));
           await help(helpArr[index].groupCodeID, helpArr[index].shareCode)
           await $.wait(1000);
