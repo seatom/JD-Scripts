@@ -28,8 +28,6 @@
 33 10 * * * node /scripts/jd_ddopk.js >> /scripts/logs/jd_ddopk.log 2>&1
 # 点点券
 20 0,20 * * * node /scripts/jd_necklace.js >> /scripts/logs/jd_necklace.log 2>&1
-# 电竞经理
-34 3-23/2 * * * node /scripts/jd_djjl.js >> /scripts/logs/jd_djjl.log 2>&1
 #金榜创造营
 40 9,21 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
 #5g超级盲盒
