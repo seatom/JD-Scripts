@@ -82,13 +82,13 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
   }
   // 助力
   let res = [], res2 = [];
-  $.innerShInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement_one.json');
-  res2 = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+  $.innerShInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/jd_summer.json');
+  res2 = await getAuthorShareCode('https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/jd_summer.json');
   if(!$.innerShInviteList[0]){
-    $.innerShInviteList = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+    $.innerShInviteList = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/jd_summer.json');
   }
   if(!res2[0]){
-    res2 = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+    res2 = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/jd_summer.json');
   }
   $.ShInviteLists = []
   $.ShInviteLists = []
@@ -98,7 +98,7 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
   }else{
     $.ShInviteLists.push(...$.ShInviteList);
   }
-  for (let i = 0; i < 0; i++) {
+  for (let i = 0; i < cookiesArr.length; i++) {
     $.cookie = cookiesArr[i];
     $.canHelp = true;
     $.UserName = decodeURIComponent($.cookie.match(/pt_pin=([^; ]+)(?=;?)/) && $.cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
@@ -253,7 +253,7 @@ async function dealReturn(type, res) {
           let look = data.data.result
           look.assistanceVOList = (look.assistanceVOList && look.assistanceVOList.length) || 0
           console.log(JSON.stringify(look))
-          if (look.inviteId) $.ShInviteList.push(look.inviteId);
+          //if (look.inviteId) $.ShInviteList.push(look.inviteId);
           console.log(`守护金额：${Number(look.activityLeftAmount || 0)} 助力次数：${look.assistanceVOList} 护盾剩余：${timeFn(Number(look.guardLeftSeconds || 0) * 1000)} 离结束剩：${timeFn(Number(look.activityLeftSeconds || 0) * 1000)}`)
           if(look.activityLeftSeconds == 0) $.Shend = true
         }
