@@ -98,7 +98,7 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
   }else{
     $.ShInviteLists.push(...$.ShInviteList);
   }
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 0; i++) {
     $.cookie = cookiesArr[i];
     $.canHelp = true;
     $.UserName = decodeURIComponent($.cookie.match(/pt_pin=([^; ]+)(?=;?)/) && $.cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
