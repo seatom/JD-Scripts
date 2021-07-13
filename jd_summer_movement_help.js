@@ -30,9 +30,6 @@ $.cookie = '';
 $.secretpInfo = {};
 $.ShInviteList = [];
 $.innerShInviteList = [
-'H8mphK_xEE78I9nOW5h_1Q',
-'H8mphLLtA0_hO8_WW9c',
-'H8mphKv1H0L6IIGdEtw61G2STxPBMA'
 ];
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -101,7 +98,7 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
   }else{
     $.ShInviteLists.push(...$.ShInviteList);
   }
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < cookiesArr.length; i++) {
     $.cookie = cookiesArr[i];
     $.canHelp = true;
     $.UserName = decodeURIComponent($.cookie.match(/pt_pin=([^; ]+)(?=;?)/) && $.cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
