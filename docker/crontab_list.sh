@@ -45,7 +45,7 @@
 #燃动夏季
 5 2,6-23/2 * * * node /scripts/jd_summer_movement.js >> /scripts/logs/jd_summer_movement.log 2>&1
 #燃动夏季H
-12 20 14 7 * node /scripts/jd_summer_movement_help.js >> /scripts/logs/jd_summer_movement_help.log 2>&1
+#12 20 14 7 * node /scripts/jd_summer_movement_help.js >> /scripts/logs/jd_summer_movement_help.log 2>&1
 #新签到
 10 0,18 * * * node /scripts/jd_NewSign.js >> /scripts/logs/jd_NewSign.log 2>&1
 #早起福利
@@ -119,7 +119,8 @@
 27 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 # 京东秒秒币
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
-
+# 财富岛
+10 5-23/5 * * * node /scripts/jd_wealth_island.js >> /scripts/logs/jd_wealth_island.log 2>&1
 # 京东极速版
 48 0,12,18 * * *  node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 # 京东抽奖机
