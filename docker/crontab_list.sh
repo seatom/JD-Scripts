@@ -2,8 +2,6 @@
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
 ##############短期活动##############
-#全民抢京豆
-1 8,13 * * * node /scripts/jd_qmqjd.js >> /scripts/logs/jd_qmqjd.log 2>&1
 #极速版红包
 40 0,8 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
 #jd_health
