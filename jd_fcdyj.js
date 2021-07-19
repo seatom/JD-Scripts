@@ -1,8 +1,8 @@
 /*
 #柠檬发财大赢家
 #自定义邀请码环境变量
-export redEnvelopeId="b02a5ce1e9844ac9a3434a80fbf4065499281626701549729" ##本期活动ID
-export inviter="iyuDg5PEgcSvRuE056jOPQ" ##邀请码
+export redEnvelopeId="" ##本期活动ID
+export inviter="" ##邀请码
 
 [task_local]
 #柠檬发财大赢家
