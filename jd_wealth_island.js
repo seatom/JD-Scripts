@@ -57,10 +57,10 @@ $.appId = 10032;
   let res = [], res2 = [];
   $.InviteLists = []
   if (HelpAuthorFlag) {
-    $.innerInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/wealth_island_code_one.json');
-    res2 = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/wealth_island_code.json');
+    $.innerInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/new_cfd.json');
+    res2 = await getAuthorShareCode('https://raw.githubusercontent.com/seatom/updateTeam/main/shareCodes/new_cfd.json');
     $.innerInviteLists = getRandomArrayElements([...res, ...res2], [...res, ...res2].length);
-    $.InviteLists.push(...$.InviteList,...$.innerInviteList,...$.innerInviteLists);
+    $.InviteLists.push(...$.innerInviteList,...$.InviteList,...$.innerInviteLists);
   }else{
     $.InviteLists.push(...$.InviteList);
   }
@@ -348,7 +348,7 @@ async function sign(){
     }
     
     if($.Aggrtask && $.Aggrtask.Data && $.Aggrtask.Data.Employee && $.Aggrtask.Data.Employee.EmployeeList){
-        if($.Aggrtask.Data && $.Aggrtask.Data.Employee && !$.Aggrtask.Data.Employee.EmployeeList){
+        if($.Aggrtask.Data && $.Aggrtask.Data.Employee && $.Aggrtask.Data.Employee.EmployeeList){
         console.log(`\n领取邀请奖励`)
         for(let i of $.Aggrtask.Data.Employee.EmployeeList){
           if(i.dwStatus == 0){
@@ -658,8 +658,8 @@ function printRes(res, msg=''){
     if(res.Data){
       result = res.Data
     }
-    if(result.ddwCoin || result.ddwMoney || result.strPrizeName){
-      console.log(`${msg}获得:${result.ddwCoin && ' '+result.ddwCoin+'金币' || ''}${result.ddwMoney && ' '+result.ddwMoney+'财富' || ''}${result.strPrizeName && ' '+result.strPrizeName+'红包' || ''}`)
+    if(result.ddwCoin || result.ddwMoney || result.strPrizeName || result.StagePrizeInfo.strPrizeName){
+      console.log(`${msg}获得:${result.ddwCoin && ' '+result.ddwCoin+'金币' || ''}${result.ddwMoney && ' '+result.ddwMoney+'财富' || ''}${result.strPrizeName && ' '+result.strPrizeName+'红包' || ''}${result.StagePrizeInfo.strPrizeName && ' '+result.StagePrizeInfo.strPrizeName || ''}`)
     }else if(result.Prize){
       console.log(`${msg}获得: ${result.Prize.strPrizeName && '优惠券 '+result.Prize.strPrizeName || ''}`)
     }else if(res && res.sErrMsg){
