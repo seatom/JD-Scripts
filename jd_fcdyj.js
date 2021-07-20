@@ -19,7 +19,7 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let cookiesArr = [], cookie = '', message;
 let redEnvelopeId = '';
 let inviter = '';
-
+/*
 if (process.env.redEnvelopeId) {
   redEnvelopeId = process.env.redEnvelopeId;
 }
@@ -27,6 +27,10 @@ if (process.env.redEnvelopeId) {
 if (process.env.inviter) {
   inviter = process.env.inviter;
 }
+*/
+redEnvelopeId = "837e3898acb64f02be7f42cf408b9e5152961626734689929";
+inviter ="iyuDg5PEgcSvRuE056jOPQ";
+
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
