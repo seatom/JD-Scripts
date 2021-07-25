@@ -52,6 +52,9 @@
 30 9,15,21 * * * node /scripts/jd_fcdyj.js >> /scripts/logs/jd_fcdyj.log 2>&1
 # 跳跳乐瓜分京豆
 1 3,11,21 * * * node /scripts/jd_jump.js >> /scripts/logs/jd_jump.log 2>&1
+# 抢京豆
+#1 3 * * * node /scripts/jd_angryBean.js >> /scripts/logs/jd_angryBean.log 2>&1
+
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
