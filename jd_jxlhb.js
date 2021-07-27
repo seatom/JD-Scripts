@@ -45,15 +45,27 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
       '活动入口：京喜app-》我的-》京喜领88元红包\n' +
       '助力逻辑：先自己京东账号相互助力，如有剩余助力机会，则助力作者\n' +
       '温馨提示：如提示助力火爆，可尝试寻找京东客服')
-  let res = []
-  res = await getAuthorShareCode('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/jxhb.json')
-  if (!res) {
-    $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jxhb.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
-    await $.wait(1000)
-    res = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jxhb.json')
-  }
-  if (res && res.activeId) $.activeId = res.activeId;
-  $.authorMyShareIds = [...((res && res.codes) || [])];
+  //let res = []
+  //res = await getAuthorShareCode('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/jxhb.json')
+  //if (!res) {
+  //  $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jxhb.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
+  //  await $.wait(1000)
+  //  res = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/jxhb.json')
+  //}
+  //if (res && res.activeId) $.activeId = res.activeId;
+  //$.authorMyShareIds = [...((res && res.codes) || [])];
+  $.authorMyShareIds = [
+"sA0J0amfPeyFqzbgvE-y2oHh3lYS989FZLBNDR7vHkc",
+"sA0J0amfPeyFqzbgvE-y2i91qBNcLL-SCRfR8E6ZXS4",
+"sA0J0amfPeyFqzbgvE-y2isEpKmbGFh-AxTrZWoPtkkcyNC5eQqZl7KVK6Di_Uac",
+"sA0J0amfPeyFqzbgvE-y2ijrfVPuHMl9I16qCFVd9vCg2Iz3S0mh6WEZxJEoHpF5",
+"sA0J0amfPeyFqzbgvE-y2ioaV3LopzXB0St5NsplJzy0HUflHe3QerLjOJtCXoxd",
+"sA0J0amfPeyFqzbgvE-y2kRyar2L7AIbQBWXafpCvg6YPFVc6cL2fs4MJ7LeCQyU",
+"sA0J0amfPeyFqzbgvE-y2kit5xB7hEhZqIf6MPKoUhJMt2t-MRZmCgD4LX1hzriD",
+"sA0J0amfPeyFqzbgvE-y2qzG9kwKks-eM9TbKTwn9ai7qgrx_LU9RrSrXbQ5VW7t",
+"sA0J0amfPeyFqzbgvE-y2n3fTbKt6jWGG9yDyJ-iIDOH7lqnzE4hT8CTI9utANmN",
+"sA0J0amfPeyFqzbgvE-y2p-u9dCoKP4QG4jlSJs_F-JuDyAeiehT34DezAowfMbD"
+  ];
   //开启红包,获取互助码
   for (let i = 0; i < cookiesArr.length; i++) {
     $.index = i + 1;
