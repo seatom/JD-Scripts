@@ -54,7 +54,8 @@
 1 3,11,21 * * * node /scripts/jd_jump.js >> /scripts/logs/jd_jump.log 2>&1
 # 抢京豆
 #1 3 * * * node /scripts/jd_angryBean.js >> /scripts/logs/jd_angryBean.log 2>&1
-
+# 京喜领红包
+56 8,13,23 * * * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
