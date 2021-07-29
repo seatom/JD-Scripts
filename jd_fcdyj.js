@@ -28,8 +28,8 @@ if (process.env.inviter) {
   inviter = process.env.inviter;
 }
 */
-redEnvelopeId = "0770f66511dd4f12a0338a39caebe4af48111627488577854";
-inviter ="2rwvBv0vz9bva6Zt6icOlA";
+redEnvelopeId = "5d3a728165b74be79d059e648158e05313941627598976378";
+inviter ="z3D-GtaldqZcZaSDuwHHdO2oKZ9KlcsI9GC1wpLZ_sw";
 
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
