@@ -52,13 +52,15 @@
 30 9,15,21 * * * node /scripts/jd_fcdyj.js >> /scripts/logs/jd_fcdyj.log 2>&1
 # 跳跳乐瓜分京豆
 1 3,11,21 * * * node /scripts/jd_jump.js >> /scripts/logs/jd_jump.log 2>&1
-# 抢京豆
-#1 3 * * * node /scripts/jd_angryBean.js >> /scripts/logs/jd_angryBean.log 2>&1
+# WX粉丝
+#1 8 * * * node /scripts/jd_wxFans.js >> /scripts/logs/jd_wxFans.log 2>&1
 # 京喜领红包
 56 8,13,23 * * * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
+# jx签到
+0 2,15 * * * cd /scripts && node jx_sign.js >> /scripts/logs/jx_sign.log 2>&1
 # 东东超市兑换奖品
 0,30 0 * * * node /scripts/jd_blueCoin.js >> /scripts/logs/jd_blueCoin.log 2>&1
 # 摇京豆
@@ -127,6 +129,8 @@
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 # 财富岛
 10 2-23/3 * * * node /scripts/jd_wealth_island.js >> /scripts/logs/jd_wealth_island.log 2>&1
+# 财富岛TX
+59 11,12,23 * * * node /scripts/jd_cfdtx.js >> /scripts/logs/jd_cfdtx.log 2>&1
 # 京东极速版
 48 0,12,18 * * *  node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 # 京东抽奖机
