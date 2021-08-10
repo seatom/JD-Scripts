@@ -66,6 +66,8 @@
 34 1,13 * * * node /scripts/jd_ldhwj.js >> /scripts/logs/jd_ldhwj.log 2>&1
 # 女装盲盒
 48 2,21 * * * node /scripts/jd_nzmh.js >> /scripts/logs/jd_nzmh.log 2>&1
+# 抢京豆
+#48 0,7 * * * node /scripts/jd_angryBean.js >> /scripts/logs/jd_angryBean.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
