@@ -28,8 +28,8 @@ if (process.env.inviter) {
   inviter = process.env.inviter;
 }
 */
-redEnvelopeId = "446f29f3ea99448288fcb9e060ee7f3a87971628811759485";
-inviter ="iyuDg5PEgcSvRuE056jOPQ";
+redEnvelopeId = "b7c25c901ff04397a42994b16c51fa5970311628857416094";
+inviter ="32gyfXDQpNt1CTTzb2jduQ";
 
 
 if ($.isNode()) {
