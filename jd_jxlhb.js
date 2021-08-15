@@ -55,11 +55,11 @@ const BASE_URL = 'https://wq.jd.com/cubeactive/steprewardv3'
   //if (res && res.activeId) $.activeId = res.activeId;
   //$.authorMyShareIds = [...((res && res.codes) || [])];
   $.authorMyShareIds = [
+"97MHi36j4mhiZN-HiWs9rIHh3lYS989FZLBNDR7vHkc",
 "97MHi36j4mhiZN-HiWs9rC91qBNcLL-SCRfR8E6ZXS4",
 "97MHi36j4mhiZN-HiWs9rCsEpKmbGFh-AxTrZWoPtkkcyNC5eQqZl7KVK6Di_Uac",
 "97MHi36j4mhiZN-HiWs9rCjrfVPuHMl9I16qCFVd9vCg2Iz3S0mh6WEZxJEoHpF5",
 "97MHi36j4mhiZN-HiWs9rCoaV3LopzXB0St5NsplJzy0HUflHe3QerLjOJtCXoxd",
-"97MHi36j4mhiZN-HiWs9rIHh3lYS989FZLBNDR7vHkc",
 "97MHi36j4mhiZN-HiWs9rERyar2L7AIbQBWXafpCvg6YPFVc6cL2fs4MJ7LeCQyU",
 "97MHi36j4mhiZN-HiWs9rEit5xB7hEhZqIf6MPKoUhJMt2t-MRZmCgD4LX1hzriD",
 "97MHi36j4mhiZN-HiWs9rKzG9kwKks-eM9TbKTwn9ai7qgrx_LU9RrSrXbQ5VW7t",
