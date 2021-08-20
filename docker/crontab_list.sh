@@ -70,7 +70,8 @@
 # 48 0,7 * * * node /scripts/jd_angryBean.js >> /scripts/logs/jd_angryBean.log 2>&1
 # 汽车生活节
 30 9,21 12-20 8 * node /scripts/jd_qcshj.js >> /scripts/logs/jd_qcshj.log 2>&1
-
+# 开学充电站
+11 1,13 * * * node /scripts/jd_kxcdz.js >> /scripts/logs/jd_kxcdz.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
